@@ -8,7 +8,7 @@
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 2%;
+    padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -30,6 +30,7 @@ section {
 .logo h2 {
     font-weight: normal;
     font-size: 22px;
+    position: absolute;
 }
 
 .logo b {
@@ -43,7 +44,7 @@ section {
 }
 
 .menu {
-    width: 80%;
+    width: 100%;
     text-align: right;
 }
 
@@ -70,6 +71,36 @@ section {
 .menu .btn-menu:hover {
     color: #fff;
     background-color: #f22400;
+}
+
+.menu-items {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: #14140F;
+    border-bottom: 2px solid #F26800;
+    display: block;
+    width: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.menu-items a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-items.show {
+    width: 100%;
+    opacity: 1;
+}
+
+.menu-items.hide {
+    width: 0;
+    opacity: 0;
 }
 
 section.main {
@@ -189,6 +220,190 @@ section.conquistas {
     color: #F26800;
 }
 
+.conquista-single img {
+    height: 60px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    transform: scale(1,1);
+    cursor: pointer;
+}
+
+.conquista-single img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1,1.1);
+}
+
+section.sobre-sla {
+    padding: 80px 0;
+}
+
+.sobre-sla-img {
+    width: 50%;
+    border: 2px solid #F26800;
+}
+
+.sobre-sla-img img {
+    max-width: 100%;
+}
+
+.sobre-sla-content {
+    width: 50%;
+    padding: 0 50px;
+}
+
+.sobre-sla-content h2 {
+    color: #F26800;
+    margin-bottom: 20px;
+}
+
+.sobre-sla-content p {
+    color: #14140F;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+section.depoimentos {
+    padding: 40px 0;
+}
+
+section.depoimentos .depoimentos-chamada {
+    text-align: center;
+}
+
+.depoimentos-chamada h2 {
+    color: #F26800;
+    text-transform: uppercase
+}
+
+.depoimentos-chamada p {
+    color: #bfdbc5;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.carrousel {
+    display: flex;
+}
+
+.carrousel-single {
+    width: 31%;
+    margin: 0 2%;
+    text-align: center;
+}
+
+.carrousel-single img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline;
+    margin: 10px 0;
+}
+
+.carrousel-single-box {
+    padding: 10px;
+    background-color: #bfdbc5;
+    border-radius: 10px;
+}
+
+.carrousel-single-box p {
+    font-style: italic;
+    font-size: 14px;
+    color: #14140F;
+}
+
+section.footer {
+    background-color: #14140F;
+    padding: 40px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-follow {
+    display: flex;
+    margin: 20px 50px;
+    text-align: center;
+    border-bottom: 1px solid #F26800;
+}
+
+.footer-follow p {
+    color: #fff;
+    margin: 15px 0;
+}
+
+.footer-follow-icons {
+    transition: 0.3s;
+}
+
+.footer-follow-icons a {
+    color: #F26800;
+    width: 50px;
+    margin-left: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.footer-follow-icons:hover {
+    transform: scale(1.1,1.1);
+}
+
+.footer-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #F26800;
+}
+
+.footer-sites {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-sites-single {
+    margin: 40px 40px 0;
+    text-align: center;
+}
+
+.footer-sites-single img {
+    height: 60px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    transform: scale(1,1);
+    cursor: pointer;
+}
+
+.footer-sites-single img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1,1.1);
+}
+
+.copyrights {
+    padding: 40px 0 0;
+    width: 100%;
+}
+
+.copyrights p {
+    color: #bfdbc5;
+    font-size: 12px;
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .menu {
         display: none;
@@ -216,6 +431,16 @@ section.conquistas {
     }
 
     .conteudo-sobre p {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-sites-single {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav a {
         width: 100%;
         margin-bottom: 20px;
     }
