@@ -6,11 +6,14 @@
 .caixa-formulario{
     background-color: #14140F;
     padding: 50px 50px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #F26800;
 }
 
 .caixa-formulario h2 {
@@ -40,7 +43,7 @@
     justify-content: flex-start;
 }
 
-.campo input {
+.campo-pessoal input {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #F26800;
@@ -75,18 +78,6 @@
 
 .caixa-formulario button:hover {
     opacity: 0.8;
-}
-
-.caixa-cadastro button {
-    margin-top: 20px;
-    width: 120px;
-    color: #ffffff;
-    background-color: #e6005a;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .caixa-cadastro button:hover {

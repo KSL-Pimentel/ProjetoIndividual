@@ -1,0 +1,158 @@
+.main .container {
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-formulario{
+    background-color: #14140F;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 4px solid #F26800;
+    border-right: none;
+}
+
+.caixa-formulario h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.caixa-cadastro{
+    background-color: #F26800;
+    padding: 25px 85px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-cadastro h2 {
+    color: #F26800;
+    margin-bottom: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.campo input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #F26800;
+    color: #14140F;
+}
+
+.campo input:hover {
+    opacity: 0.8;
+}
+
+.campo label {
+    color: #F26800;
+    margin: 15px 0;
+}
+
+.caixa-cadastro .campo label {
+    color: #F26800;
+    margin: 10px 0;
+}
+
+.caixa-formulario button {
+    margin-top: 20px;
+    width: 120px;
+    color: #ffffff;
+    background-color: #F26800;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caixa-formulario button:hover {
+    opacity: 0.8;
+}
+
+.caixa-cadastro button:hover {
+    opacity: 0.8;
+}
+
+.caixa-ajuda {
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.caixa-ajuda a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 8px;
+    transition: 0.3s;
+}
+
+.caixa-ajuda a:hover {
+    color: #F26800;
+}
+
+.caixa-curiosidade {
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border: 4px solid #F26800;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-left: none;
+}
+
+.caixa-curiosidade h2 {
+    color: #F26800;
+    margin-bottom: 20px;
+}
+
+.caixa-curiosidade img {
+    max-height: 200px;
+    padding-right: 10px;
+    transition: 1s;
+}
+
+.caixa-curiosidade img:hover {
+    transform: rotate(-10deg) scale(2);
+}
+
+.caixa-curiosidade P {
+    font-size: 18px;
+}
+
+.curiosidade {
+    display: flex;
+    padding: 20px 0;
+}
+
+.caixa-curiosidade button {
+    margin-top: 20px;
+    width: 120px;
+    color: #ffffff;
+    background-color: #F26800;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caixa-curiosidade button:hover {
+    opacity: 0.8;
+}

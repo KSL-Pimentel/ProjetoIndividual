@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/comoJogar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Into The Sleeve</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo"> 
+                <h2> <b>I</b>NTO THE SLEEVE </h2>
+            </div>
+            
+            <div class="menu">
+                <a href="./index.html">
+                    Home
+                </a>
+                
+                <a href="#">
+                    Sobre
+                </a>
+                
+                <a href="#">
+                    Contato
+                </a>
+                
+                <a class="btn-menu" href="./login.html">
+                    Entrar
+                </a>
+            </div>
+
+            <div class="menu-mobile">
+                <i class="fa-solid fa-bars menu-mobile-icon"></i>
+
+                <div class="menu-items">
+                    <a href="#">
+                        Home
+                    </a>
+                    
+                    <a href="#">
+                        Sobre
+                    </a>
+                    
+                    <a href="#">
+                        Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="caixa-instrucao">
+                <h2>APRENDENDO AS REGRAS</h2>
+
+                <p>Magic: The Gathering dá a você o poder de descobrir sua estratégia, conhecer os Planeswalkers, explorar o multiverso e enfrentar amigos do mundo inteiro.</p>
+                
+                <div class="main-btns">
+                    <div class="footer-sites">
+                        <div class="footer-sites-single">                            
+                            <a href="./aprenderPKM.html"><img src="./assets/marcas/pokemonLogo.png" alt=""></a>    
+                        </div>
+
+                        <div class="footer-sites-single">                           
+                            <a href="./aprenderMTG.html"><img src="./assets/marcas/magicLogo.png" alt=""></a>
+                        </div>
+                        
+                        
+                        <div class="footer-sites-single">
+                            <a href="./aprenderYGO.html"><img src="./assets/marcas/yugiohLogo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_regras" class="regras">
+        <div class="container">
+            <div class="regras-titulo">
+                <h1>MAGIC THE GATHERING</h1>
+            </div>
+        
+            <h2>Escolha o formato</h2>
+        
+            <div class="escolha-formatos">
+                <button onclick="escolherPadrao()">Padrão</button>
+                <button onclick="escolherCommander()">Commander</button>
+                <button onclick="escolherBooster()">Booster Draft</button>
+            </div>
+        
+            <div id="div_regras" class="regras-basico">
+                <h2>Sobre o Jogo</h2>
+        
+                <h3>Formato Padrão</h3>
+            
+                <p>Seus cards, seu deck, sua vitória! Construa o melhor deck com cards das últimas coleções, depois enfrente seus oponentes e seja vitorioso.</p>
+            
+                <p>O Padrão é um formato dinâmico, onde você constrói decks e joga com cards de coleções recentes do Magic. A jogabilidade evolui o tempo todo, e estratégias fresquinhas fazem do Padrão um dos jeitos mais populares e divertidos de jogar Magic.</p>
+            
+                <div class="basico-jogo">
+                     <div class="basico-jogo-single">
+                         <h4>Tamanho do Deck</h4>
+            
+                         <i class="fa-solid fa-window-restore"></i>
+            
+                         <p>60+</p>
+                     </div>
+            
+                     <div class="basico-jogo-single">
+                         <h4>Número de Jogadores</h4>
+            
+                         <i class="fa-solid fa-users"></i>
+            
+                         <p>2</p>
+                     </div>
+            
+                     <div class="basico-jogo-single">
+                         <h4>Tempo de Jogo</h4>
+            
+                         <i class="fa-solid fa-stopwatch"></i>
+            
+                         <p>20 min</p>
+                     </div>
+                </div>
+            </div>
+        
+            <div class="regras-gerais">
+                <h2>REGRAS</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-follow">
+                <p>Me Sigam</p>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.facebook.com/Bruno.Pimentel42">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+                    
+                <div class="footer-follow-icons">
+                    <a href="https://twitter.com/KSLovekats">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.instagram.com/pimentel.ksl/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://github.com/KSL-Pimentel">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.linkedin.com/in/bruno-silva-pimentel/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="./index.html">Home</a>
+                <a>|</a>
+                <a href="">Sobre</a>
+                <a href="">Suporte</a>
+                <a href="">Avisos</a>
+                <a href="">FAQ</a>
+                <a href="">Privacidade</a>
+                <a>|</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
+            </div>
+
+            <div class="footer-sites">
+                <div class="footer-sites-single">
+                    <a href="https://magic.wizards.com/pt-BR">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://tcg.pokemon.com/pt-br/">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://www.yugioh-card.com/en/">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://mypcards.com/battlescenes">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <p>IntoTheSleeve is a property of KSL Co.,Ltd &copy;2022 All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/comoJogar.js"></script>
+</body>
+
+</html>

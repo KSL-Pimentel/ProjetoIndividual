@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="entrar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Cadastro</title>
 </head>
@@ -18,7 +19,7 @@
             </div>
             
             <div class="menu">
-                <a href="#">
+                <a href="./index.html">
                     Home
                 </a>
                 
@@ -30,7 +31,7 @@
                     Contato
                 </a>
                 
-                <a class="btn-menu" href="file:///C:/Users/user/Desktop/ProjetoIndividual/Login.html">
+                <a class="btn-menu" href="#">
                     Entrar
                 </a>
             </div>
@@ -58,21 +59,35 @@
     <section class="main">
         <div class="container">
             <div class="caixa-formulario">
-                <h2>Olá, pronto para batalhar?</h2>
+                <h2>Seja bem vindo(a)!</h2>
+
                 <div class="campo">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" placeholder="Nome da Silva">
+                
+                    <label for="date">Data de Nascimento:</label>
+                    <input type="date" id="date" placeholder="00/00/0000">
+                
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" placeholder="UsernameGamer13">
+
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" placeholder="example@email.com">
-                </div>
-                <div class="campo">
+
+                    <label for="email">Consfirme seu E-mail:</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+            
                     <label for="password">Senha:</label>
                     <input type="password" id="password" placeholder="********">
+                
+                    <label for="password">Confirme sua senha:</label>
+                    <input type="password" id="password" placeholder="********">
                 </div>
-                <button>ENTRAR</button>
+
+                <button>CADASTRAR</button>
 
                 <div class="caixa-ajuda">
-                    <a href="#">Não possuo conta</a>
-                    <a>|</a>
-                    <a href="#">Esqueci minha senha</a>
+                    <a href="./login.html">Já possuo uma conta</a>
                 </div>
             </div>
         </div>
@@ -115,7 +130,7 @@
             </div>
 
             <div class="footer-nav">
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/index.html">Home</a>
+                <a href="./index.html">Home</a>
                 <a>|</a>
                 <a href="">Sobre</a>
                 <a href="">Suporte</a>
@@ -123,32 +138,32 @@
                 <a href="">FAQ</a>
                 <a href="">Privacidade</a>
                 <a>|</a>
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/login.html">Login</a>
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/cadastro.html">Cadastar</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
             </div>
 
             <div class="footer-sites">
                 <div class="footer-sites-single">
                     <a href="https://magic.wizards.com/pt-BR">
-                        <img src="./assets/imgs/magicLogo.png" alt="">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://tcg.pokemon.com/pt-br/">
-                        <img src="./assets/imgs/pokemonLogo.png" alt="">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://www.yugioh-card.com/en/">
-                        <img src="./assets/imgs/yugiohLogo.png" alt="">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://mypcards.com/battlescenes">
-                        <img src="./assets/imgs/BattleScenesLogo.png" alt="">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
                     </a>
                 </div>
             </div>
