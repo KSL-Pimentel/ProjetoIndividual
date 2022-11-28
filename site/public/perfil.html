@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Meu Perfil</title>
+</head>
+
+<body>
+    <section class="content">
+        <div class="menu">
+            <img src="./assets/icons/carvalho.png" alt="">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+            <p id="p_nome">Olá, Bruno!</p>
+
+            <p id="btn_modalA">Estatisticas</p>
+
+            <p id="btn_modalB">Batalhar</p>
+
+            <p id="bnt_sair">Sair</p>
+        </div>
+
+        <div id="analiseModal" class="tela-analise">
+            <div class="header-analise">
+                <h1>Carteirinha de Duelo</h1>
+
+                <span class="fechar-analise">&times;</span>
+            </div>
+        </div>
+
+        <div id="batalhaModal" class="tela-batalha">
+            <div class="header-batalha">
+                <h1>Simulador de Batalha</h1>
+
+                <span class="fechar-batalha">&times;</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-follow">
+                <p>Redes Sociais</p>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.facebook.com/Bruno.Pimentel42">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://twitter.com/KSLovekats">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.instagram.com/pimentel.ksl/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://github.com/KSL-Pimentel">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.linkedin.com/in/bruno-silva-pimentel/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="./index.html">Home</a>
+                <a>|</a>
+                <a href="">Sobre</a>
+                <a href="">Suporte</a>
+                <a href="">Avisos</a>
+                <a href="">FAQ</a>
+                <a href="">Privacidade</a>
+                <a>|</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
+            </div>
+
+            <div class="footer-sites">
+                <div class="footer-sites-single">
+                    <a href="https://magic.wizards.com/pt-BR">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://tcg.pokemon.com/pt-br/">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://www.yugioh-card.com/en/">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://mypcards.com/battlescenes">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <p>IntoTheSleeve is a property of KSL Co.,Ltd &copy;2022 All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+    var modalA = document.getElementById("analiseModal");
+    var modalB = document.getElementById("batalhaModal");
+
+    var btnA = document.getElementById("btn_modalA");
+    var btnB = document.getElementById("btn_modalB");
+
+    var spanA = document.getElementsByClassName("fechar-analise")[0];
+    var spanB = document.getElementsByClassName("fechar-batalha")[0];
+
+    btnA.onclick = function () {
+        modalA.style.display = "flex";
+        modalB.style.display = "none";
+    }
+
+    btnB.onclick = function () {
+        modalB.style.display = "flex";
+        modalA.style.display = "none";
+    }
+
+    spanA.onclick = function () {
+        modalA.style.display = "none";
+    }
+
+    spanB.onclick = function () {
+        modalB.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modalA) {
+            modalA.style.display = "none";
+        }
+        if (event.target == modalB) {
+            modalB.style.display = "none";
+        }
+    }
+</script>

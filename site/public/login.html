@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="entrar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Cadastro</title>
 </head>
@@ -18,20 +18,16 @@
             </div>
             
             <div class="menu">
-                <a href="#">
+                <a href="./index.html">
                     Home
                 </a>
                 
-                <a href="#">
-                    Sobre
+                <a href="./aprenderPKM.html">
+                    Como Jogar
                 </a>
                 
-                <a href="#">
-                    Contato
-                </a>
-                
-                <a class="btn-menu" href="file:///C:/Users/user/Desktop/ProjetoIndividual/Login.html">
-                    Entrar
+                <a class="btn-menu" href="./index.html">
+                    Voltar
                 </a>
             </div>
 
@@ -70,10 +66,20 @@
                 <button>ENTRAR</button>
 
                 <div class="caixa-ajuda">
-                    <a href="#">Não possuo conta</a>
-                    <a>|</a>
-                    <a href="#">Esqueci minha senha</a>
+                    <a href="./cadastro.html">Não possuo conta</a>
                 </div>
+            </div>
+
+            <div class="caixa-curiosidade">
+                <h2>Curiosidade rápida</h2>
+
+                <div class="curiosidade">
+                    <img id="img_curiosidade" src="./assets/cards/clefairy.png" alt="carta curiosidade">
+                    
+                    <p id="p_curiosidade"></p>
+                </div>
+
+                <button onclick="proximaCuriosidade()">PRÓXIMA!</button>
             </div>
         </div>
     </section>
@@ -81,7 +87,7 @@
     <section class="footer">
         <div class="container">
             <div class="footer-follow">
-                <p>Me Sigam</p>
+                <p>Redes Sociais</p>
 
                 <div class="footer-follow-icons">
                     <a href="https://www.facebook.com/Bruno.Pimentel42">
@@ -115,7 +121,7 @@
             </div>
 
             <div class="footer-nav">
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/index.html">Home</a>
+                <a href="./index.html">Home</a>
                 <a>|</a>
                 <a href="">Sobre</a>
                 <a href="">Suporte</a>
@@ -123,32 +129,32 @@
                 <a href="">FAQ</a>
                 <a href="">Privacidade</a>
                 <a>|</a>
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/login.html">Login</a>
-                <a href="file:///C:/Users/user/Desktop/ProjetoIndividual/cadastro.html">Cadastar</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
             </div>
 
             <div class="footer-sites">
                 <div class="footer-sites-single">
                     <a href="https://magic.wizards.com/pt-BR">
-                        <img src="./assets/imgs/magicLogo.png" alt="">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://tcg.pokemon.com/pt-br/">
-                        <img src="./assets/imgs/pokemonLogo.png" alt="">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://www.yugioh-card.com/en/">
-                        <img src="./assets/imgs/yugiohLogo.png" alt="">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
                     </a>
                 </div>
                 
                 <div class="footer-sites-single">
                     <a href="https://mypcards.com/battlescenes">
-                        <img src="./assets/imgs/BattleScenesLogo.png" alt="">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
                     </a>
                 </div>
             </div>
@@ -164,3 +170,19 @@
 </body>
 
 </html>
+
+<script>
+    var curiosidades = [
+    {imagem: "./assets/cards/darkMagician.png", texto: "Yu-Gi-Oh! Em 2009 e 2011, entrou para o livro dos recordes como o jogo de cartas mais bem sucedido, com mais de 22 bilhões e meio de cartas vendidas."},
+    {imagem: "./assets/cards/clefairy.png", texto: "Originalmente o Pikachu não era o ícone/mascote de Pokémon, era para Clefairy ser a cara de Pokémon!"},
+    {imagem: "./assets/cards/manaClash.png", texto: "Quando Magic foi apresentado pela primeira vez, o jogo chamava-se Mana Clash (nome que mais tarde se tornou uma carta, Duelo de Mana)."},
+    {imagem: "./assets/cards/burningLand.png", texto: "Yu-Gi-Oh! foi inspirado em Magic: The Gathering. Tanto que no mangá, o game de cartas era chamado de “Magic and Wizards”"},
+    {imagem: "./assets/cards/greninja.png", texto: "Em 2020, a Pokémon Company fez uma votação global para eleger os Pokémon favoritos dos fãs. Greninja, da sexta geração, foi o campeão."},
+    {imagem: "./assets/cards/theWatcher.png", texto: "Com apenas 2 mil cartas de magic, era possível criar mais baralhos do que o número de átomos do universo."},
+    ]
+
+    var sortear = parseInt(1 + Math.random() * curiosidades.length)
+
+    img_curiosidade.src = curiosidades[sortear - 1].imagem
+    p_curiosidade.innerHTML = curiosidades[sortear - 1].texto
+</script>

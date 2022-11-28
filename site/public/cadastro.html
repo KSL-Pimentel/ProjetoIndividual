@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> 
+                <h2> <b>I</b>NTO THE SLEEVE </h2>
+            </div>
+            
+            <div class="menu">
+                <a href="./index.html">
+                    Home
+                </a>
+                
+                <a href="./aprenderPKM.html">
+                    Como Jogar
+                </a>
+                
+                <a class="btn-menu" href="./index.html">
+                    Voltar
+                </a>
+            </div>
+
+            <div class="menu-mobile">
+                <i class="fa-solid fa-bars menu-mobile-icon"></i>
+
+                <div class="menu-items">
+                    <a href="#">
+                        Home
+                    </a>
+                    
+                    <a href="#">
+                        Sobre
+                    </a>
+                    
+                    <a href="#">
+                        Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="caixa-formulario">
+                <h2>Seja bem vindo(a)!</h2>
+
+                <div class="campo">
+                    <div class="campo-box">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="in_nome" placeholder="Nome da Silva">
+                        
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="in_email" placeholder="example@email.com">
+                        
+                        <label for="password">Senha:</label>
+                        <input type="password" id="in_senha" placeholder="********">
+                    </div>
+
+                    <div class="campo-box">
+                        <label for="date">Data de Nascimento:</label>
+                        <input type="date" id="in_nasc" placeholder="00/00/0000">
+
+                        <label for="email">Confirme seu E-mail:</label>
+                        <input type="email" id="in_confirmaEmail" placeholder="example@email.com" onkeyup="confirmarE()">
+                        
+                        <label for="password">Confirme sua senha:</label>
+                        <input type="password" id="in_confirmaSenha" placeholder="********" onkeyup="confirmarS()">
+                    </div>
+                </div>
+
+                <p id="p_confirma"></p>
+
+                <button>CADASTRAR</button>
+
+                <div class="caixa-ajuda">
+                    <a href="./login.html">Já possuo uma conta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-follow">
+                <p>Redes Sociais</p>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.facebook.com/Bruno.Pimentel42">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+                    
+                <div class="footer-follow-icons">
+                    <a href="https://twitter.com/KSLovekats">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.instagram.com/pimentel.ksl/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://github.com/KSL-Pimentel">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.linkedin.com/in/bruno-silva-pimentel/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="./index.html">Home</a>
+                <a>|</a>
+                <a href="">Sobre</a>
+                <a href="">Suporte</a>
+                <a href="">Avisos</a>
+                <a href="">FAQ</a>
+                <a href="">Privacidade</a>
+                <a>|</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
+            </div>
+
+            <div class="footer-sites">
+                <div class="footer-sites-single">
+                    <a href="https://magic.wizards.com/pt-BR">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://tcg.pokemon.com/pt-br/">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://www.yugioh-card.com/en/">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://mypcards.com/battlescenes">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <p>IntoTheSleeve is a property of KSL Co.,Ltd &copy;2022 All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<script>
+    function confirmarE() {
+        var email = in_email.value
+        var confirma = in_confirmaEmail.value
+
+        if (email != confirma) {
+            p_confirma.innerHTML = `<span style="color: red">E-mails estão diferentes</span>`
+        } else {
+            p_confirma.innerHTML = `<span style="color: green">E-mails estão iguais</span>`
+        }
+    }
+
+    function confirmarS() {
+        var senha = in_senha.value
+        var confirma = in_confirmaSenha.value
+
+        if (senha != confirma) {
+            p_confirma.innerHTML = `<span style="color: red">Senhas estão diferentes</span>`
+        } else {
+            p_confirma.innerHTML = `<span style="color: green">Senhas estão iguais</span>`
+        }
+    }
+</script>
