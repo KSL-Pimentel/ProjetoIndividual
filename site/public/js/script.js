@@ -11,6 +11,7 @@ el.addEventListener('click', () => {
 
             menuItems.classList.remove('hide');
         }
+<<<<<<< HEAD
 });
 
 var modal = document.getElementById("minhaModal");
@@ -39,3 +40,6 @@ function proximaCuriosidade() {
     img_curiosidade.src = curiosidades[sortear - 1].imagem
     p_curiosidade.innerHTML = curiosidades[sortear - 1].texto
 }
+=======
+});
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719

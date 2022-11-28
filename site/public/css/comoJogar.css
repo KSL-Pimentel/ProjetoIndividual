@@ -310,6 +310,7 @@ ol li::before {
 .box-condicoes .marcador {
     width: 100px;
     height: 100px;
+<<<<<<< HEAD
 }
 
 .box-mtg {
@@ -443,4 +444,6 @@ ol li::before {
 .mana-content b {
     border-bottom: 2px solid #F26800;
     font-size: 40px;
+=======
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719
 }
