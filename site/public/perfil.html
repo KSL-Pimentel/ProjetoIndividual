@@ -18,13 +18,21 @@
 
             <i class="fa-solid fa-rotate-right"></i>
 
+<<<<<<< HEAD
             <p id="p_nome">Olá, <span id="b_usuario">Nome</span>!</p>
+=======
+            <p id="p_nome">Olá, Bruno!</p>
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 
             <p id="btn_modalA">Estatisticas</p>
 
             <p id="btn_modalB">Batalhar</p>
 
+<<<<<<< HEAD
             <p id="bnt_sair" onclick="limparSessao()">Sair</p>
+=======
+            <p id="bnt_sair">Sair</p>
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
         </div>
 
         <div id="analiseModal" class="tela-analise">
@@ -37,6 +45,7 @@
                 
                 <div class="analise-content">
                     <div class="analise-content-box">
+<<<<<<< HEAD
                         <h2>Pontos de Duelo: <span id="pontos_duelo">0</span></h2>
 
                         <h2>Duelos de Magic: <span id="duelos_mtg">0</span></h2>
@@ -58,6 +67,29 @@
                         <h2>Vitórias em Yu-Gi-Oh!: <span id="vitorias_ygo">0</span></h2>
 
                         <h2>Vitórias Totais: <span id="vitorias_totais">0</span></h2>
+=======
+                        <h2>Pontos de Duelo: <span>200</span></h2>
+
+                        <h2>Duelos de Magic:</h2>
+
+                        <h2>Duelos de Pokémon:</h2>
+
+                        <h2>Duelos de Yu-Gi-Oh!:</h2>
+
+                        <h2>Duelos Totais:</h2>
+                    </div>
+
+                    <div class="analise-content-box">
+                        <h2>Rank:</h2>
+
+                        <h2>Vitórias em Magic:</h2>
+
+                        <h2>Vitórias em Pokémon:</h2>
+
+                        <h2>Vitórias em Yu-Gi-Oh!:</h2>
+
+                        <h2>Vitórias Totais:</h2>
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
                     </div>
                 </div>
             </div>
@@ -75,6 +107,7 @@
                     <div class="batalha-content-box">
                         <h2>Selecione o Card Game que deseja jogar.</h2>
 
+<<<<<<< HEAD
                         <div class="btn">
                             <button onclick="batalhar_pkm()">Pokémon</button>
                             <button onclick="batalhar_mtg()">Magic</button>
@@ -211,6 +244,8 @@
 
                     <div class="btn-fim">
                         <button onclick="encerrarBatalha()">Encerrar Batalha</button>
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
                     </div>
                 </div>
             </div>
@@ -300,34 +335,49 @@
 
     <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
+<<<<<<< HEAD
     <script src="./js/funcoes.js"></script>
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 </body>
 
 </html>
 
 <script>
+<<<<<<< HEAD
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     var modalA = document.getElementById("analiseModal");
     var modalB = document.getElementById("batalhaModal");
     var modalS = document.getElementById("simuladorModal");
+=======
+    var modalA = document.getElementById("analiseModal");
+    var modalB = document.getElementById("batalhaModal");
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 
     var btnA = document.getElementById("btn_modalA");
     var btnB = document.getElementById("btn_modalB");
 
     var spanA = document.getElementsByClassName("fechar-analise")[0];
     var spanB = document.getElementsByClassName("fechar-batalha")[0];
+<<<<<<< HEAD
     var spanS = document.getElementsByClassName("fechar-simulador")[0];
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 
     btnA.onclick = function () {
         modalA.style.display = "flex";
         modalB.style.display = "none";
+<<<<<<< HEAD
         modalS.style.display = "none";
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     }
 
     btnB.onclick = function () {
         modalB.style.display = "flex";
         modalA.style.display = "none";
+<<<<<<< HEAD
         modalS.style.display = "none";
 
         in_hp.value = ""
@@ -346,6 +396,8 @@
         span_contador3.innerHTML = 0
         span_contador4.innerHTML = 0
         span_contador5.innerHTML = 0
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     }
 
     spanA.onclick = function () {
@@ -356,11 +408,14 @@
         modalB.style.display = "none";
     }
 
+<<<<<<< HEAD
     spanS.onclick = function () {
         modalS.style.display = "none";
         modalB.style.display = "flex";
     }
 
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     window.onclick = function (event) {
         if (event.target == modalA) {
             modalA.style.display = "none";
@@ -369,6 +424,7 @@
             modalB.style.display = "none";
         }
     }
+<<<<<<< HEAD
 
     var pontosDuelo = 0
 
@@ -662,4 +718,6 @@
             rank.innerHTML = "Mestre"
         }
     }
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 </script>

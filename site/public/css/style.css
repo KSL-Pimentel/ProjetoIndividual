@@ -428,6 +428,7 @@ section.footer {
     background: #f22400 ; 
 }
 
+<<<<<<< HEAD
 .card_erro {
     display: none;
     background-color: #14140F;
@@ -456,6 +457,8 @@ section.footer {
     width: 50px;
   }
 
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 @media screen and (max-width: 768px) {
     .menu {
         display: none;

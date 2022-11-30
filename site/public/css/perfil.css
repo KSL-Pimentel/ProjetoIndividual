@@ -14,8 +14,11 @@ section.content {
     width: 17%;
     text-align: center;
     border-right: 2px solid #F26800;
+<<<<<<< HEAD
     border-bottom: 2px solid #F26800;
     border-bottom-right-radius: 20px;
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     background-color: #14140f;
 }
 
@@ -70,6 +73,7 @@ section.content {
     align-items: center;
 }
 
+<<<<<<< HEAD
 .tela-simulador {
     width: 83%;
     display: none;
@@ -77,6 +81,8 @@ section.content {
     align-items: center;
 }
 
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 .analise {
     background-color: #14140f;
     width: 95%;
@@ -167,7 +173,10 @@ section.content {
 
 .batalha-content-box {
     padding: 0 30px;
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 }
 
 .batalha-content-box h2 {
@@ -180,6 +189,7 @@ section.content {
     color: #F26800;
     font-size: 30px;
 }
+<<<<<<< HEAD
 
 .simulador {
     background-color: #14140f;
@@ -386,3 +396,5 @@ section.content {
 .btn-fim button:hover {
     background-color: #f22400;
 }
+=======
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687

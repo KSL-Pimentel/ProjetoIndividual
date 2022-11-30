@@ -11,11 +11,29 @@
     align-items: center;
     justify-content: center;
     width: 500px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:site/public/css/login.css
+=======
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     height: 500px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     border: 4px solid #F26800;
     border-right: none;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+========
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #F26800;
+>>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719:site/public/css/cadastro.css
+=======
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
 }
 
 .caixa-formulario h2 {
@@ -45,7 +63,11 @@
     justify-content: flex-start;
 }
 
+<<<<<<< HEAD
+.campo-pessoal input {
+=======
 .campo input {
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #F26800;
@@ -124,8 +146,17 @@
 
 .caixa-curiosidade img {
     max-height: 200px;
+<<<<<<< HEAD
     margin-right: 10px;
     border-radius: 5px;
+=======
+<<<<<<< HEAD
+    margin-right: 10px;
+    border-radius: 5px;
+=======
+    padding-right: 10px;
+>>>>>>> 2e217ac96a85df2d80717ea2670138e28def4719
+>>>>>>> 78850a6478b7fdcf211d20bcd34d73f0cda7c687
     transition: 1s;
 }
 
