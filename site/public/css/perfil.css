@@ -1,0 +1,388 @@
+body {
+    background-color: #14140f83;
+}
+
+section.content {
+    display: flex;
+}
+
+.menu {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 17%;
+    text-align: center;
+    border-right: 2px solid #F26800;
+    border-bottom: 2px solid #F26800;
+    border-bottom-right-radius: 20px;
+    background-color: #14140f;
+}
+
+.menu p {
+    margin: 20px 0; 
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #F26800;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu p:hover {
+    color: #F26800;
+}
+
+.menu #p_nome {
+    font-size: 14px;
+    border: none;
+    cursor: default;
+}
+
+.menu #p_nome:hover {
+    color: #fff;
+}
+
+.menu img {
+    max-width: 200px;
+    border-radius: 50%;
+    border: 2px solid #F26800;
+}
+
+.menu i {
+    color: #F26800;
+    font-size: 20px;
+    position: absolute;
+    margin: 140px 140px;
+}
+
+.tela-analise {
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-batalha {
+    width: 83%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-simulador {
+    width: 83%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.analise {
+    background-color: #14140f;
+    width: 95%;
+    height: 90%;
+    border: 2px solid #F26800;
+    border-radius: 20px;
+}
+
+.header-analise {
+    width: 100%;
+    display: flex;
+}
+
+.header-analise h1 {
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+}
+
+.header-analise span {
+    height: 100px;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.analise-content {
+    display: flex;
+    width: 100%;
+}
+
+.analise-content-box {
+    padding: 0 30px;
+    width: 50%;
+}
+
+.analise-content-box h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.analise-content-box span {
+    color: #F26800;
+    font-size: 30px;
+}
+
+.batalha {
+    background-color: #14140f;
+    width: 95%;
+    height: 90%;
+    border: 2px solid #F26800;
+    border-radius: 20px;
+}
+
+.header-batalha {
+    width: 100%;
+    display: flex;
+}
+
+.header-batalha h1 {
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+}
+
+.header-batalha span {
+    height: 100px;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.batalha-content {
+    display: flex;
+    width: 100%;
+}
+
+.batalha-content-box {
+    padding: 0 30px;
+    width: 100%;
+}
+
+.batalha-content-box h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.batalha-content-box span {
+    color: #F26800;
+    font-size: 30px;
+}
+
+.simulador {
+    background-color: #14140f;
+    width: 95%;
+    border: 2px solid #F26800;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.header-simulador {
+    width: 100%;
+    display: flex;
+}
+
+.header-simulador h1 {
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+}
+
+.header-simulador span {
+    height: 100px;
+    padding: 20px;
+    color: #fff;
+    border-bottom: 2px solid #F26800;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.simulador-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.simulador-content-box {
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+}
+
+.simulador-content-box h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.simulador-content-box span {
+    color: #F26800;
+    font-size: 30px;
+}
+
+.simulador-content-box select {
+    color: #fff;
+    background-color: #14140f;
+    font-size: 30px;
+    border: 2px solid #F26800;
+    border-radius: 6px;
+}
+
+.simulador-content-box button {
+    color: #fff;
+    margin: 10px;
+    margin-top: 15px;
+    height: 80px;
+    background-color: #14140f;
+    font-size: 30px;
+    border: 2px solid #F26800;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.simulador-content-box button:hover {
+    background-color: #F26800;
+}
+
+#vida {
+    margin-right: 20px;
+}
+
+.sel {
+    height: 80px;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.simulador-content-box input {
+    color: #fff;
+    background-color: #14140f;
+    font-size: 30px;
+    border: 2px solid #F26800;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.ipt {
+    height: 80px;
+    width: 150px;
+    margin: 15px;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.btn button {
+    margin: 50px;
+    color: #fff;
+    width: 500px;
+    background-color: #F26800;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn button:hover {
+    background-color: #f22400;
+}
+
+.carta {
+    margin: 30px 20px;
+    background-color: #14140f;
+    border: 5px solid #F26800;
+    height: 230px;
+    width: 180px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.carta:hover {
+    transform: scale(1.3);
+}
+
+.carta input {
+    background-color: #14140f00;
+    border: none;
+    border-bottom: 2px solid #F26800;
+    border-radius: 0;
+    font-size: 12px;
+    height: 30px;
+    width: 100%;
+}
+
+.carta button {
+    background-color: #F26800;
+    border: none;
+    font-size: 12px;
+    height: 20px;
+}
+
+.carta button:hover {
+    background-color: #f22400;
+}
+
+.carta p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0 5px;
+    margin-top: 10px;
+}
+
+.carta span {
+    color: #F26800;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.btn-contador {
+    display: flex;
+}
+
+.btn-contador button{
+    width: 45%;
+}
+
+.btn-fim {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-fim button {
+    margin: 20px;
+    width: 220px;
+    color: #ffffff;
+    background-color: #F26800;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-fim button:hover {
+    background-color: #f22400;
+}

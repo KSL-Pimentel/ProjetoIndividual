@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Meu Perfil</title>
+</head>
+
+<body>
+    <section class="content">
+        <div class="menu">
+            <img src="./assets/icons/carvalho.png" alt="">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+            <p id="p_nome">Olá, <span id="b_usuario">Nome</span>!</p>
+
+            <p id="btn_modalA">Estatisticas</p>
+
+            <p id="btn_modalB">Batalhar</p>
+
+            <p id="bnt_sair" onclick="limparSessao()">Sair</p>
+        </div>
+
+        <div id="analiseModal" class="tela-analise">
+            <div class="analise">
+                <div class="header-analise">
+                    <h1>Carteirinha de Duelo</h1>
+                
+                    <span class="fechar-analise">&times;</span>
+                </div>
+                
+                <div class="analise-content">
+                    <div class="analise-content-box">
+                        <h2>Pontos de Duelo: <span id="pontos_duelo">0</span></h2>
+
+                        <h2>Duelos de Magic: <span id="duelos_mtg">0</span></h2>
+
+                        <h2>Duelos de Pokémon: <span id="duelos_pkm">0</span></h2>
+
+                        <h2>Duelos de Yu-Gi-Oh!: <span id="duelos_ygo">0</span></h2>
+
+                        <h2>Duelos Totais: <span id="duelos_totais">0</span></h2>
+                    </div>
+
+                    <div class="analise-content-box">
+                        <h2>Rank: <span id="rank">Iniciante</span></h2>
+
+                        <h2>Vitórias em Magic: <span id="vitorias_mtg">0</span></h2>
+
+                        <h2>Vitórias em Pokémon: <span id="vitorias_pkm">0</span></h2>
+
+                        <h2>Vitórias em Yu-Gi-Oh!: <span id="vitorias_ygo">0</span></h2>
+
+                        <h2>Vitórias Totais: <span id="vitorias_totais">0</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="batalhaModal" class="tela-batalha">
+            <div class="batalha">
+                <div class="header-batalha">
+                    <h1>Batalhar</h1>
+                
+                    <span class="fechar-batalha">&times;</span>
+                </div>
+                
+                <div class="batalha-content">
+                    <div class="batalha-content-box">
+                        <h2>Selecione o Card Game que deseja jogar.</h2>
+
+                        <div class="btn">
+                            <button onclick="batalhar_pkm()">Pokémon</button>
+                            <button onclick="batalhar_mtg()">Magic</button>
+                            <button onclick="batalhar_ygo()">Yu-Gi-Oh!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simuladorModal" class="tela-simulador">
+            <div class="simulador">
+                <div class="header-simulador">
+                    <h1 id="h1_simulador">Simulador</h1>
+                
+                    <span class="fechar-simulador">&times;</span>
+                </div>
+                
+                <div class="simulador-content">
+                    <div class="simulador-content-box">
+                        <h2>Pontos de vida: <span id="vida"></span></h2>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <select id="sel_hp" class="sel">
+                            <option value="perder">Perder</option>
+                            <option value="ganhar">Ganhar</option>
+                        </select>
+
+                        <input id="in_hp" class="ipt" type="number">
+
+                        <button onclick="calcularHp()">Calcular</button>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <h2>Calculadora: <span id="calcular_resultado">0</span></h2>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <input id="in_num1" class="ipt" type="number">
+
+                        <select id="sel_operacao" class="sel">
+                            <option value="mais">+</option>
+                            <option value="menos">-</option>
+                            <option value="vezes">X</option>
+                            <option value="divisao">/</option>
+                        </select>
+
+                        <input id="in_num2" class="ipt" type="number">
+
+                        <button onclick="calculadora()">Calcular</button>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <h2>Jogar dado: <span id="resultado_sorte">Resultado</span></h2>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <select id="sel_dados" class="sel">
+                            <option value="d2">Moeda</option>
+                            <option value="d6">D6</option>
+                            <option value="d20">D20</option>
+                            <option value="d100">D100</option>
+                        </select>
+
+                        <button onclick="sortear()">Sortear</button>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <h2>Administrar Cartas:</h2>
+                    </div>
+
+                    <div class="simulador-content-box">
+                        <div class="carta">
+                            <input id="in_nomeCarta1" type="text" placeholder="Nome Carta">
+
+                            <p>Contadores: <span id="span_contador1">0</span></p>
+
+                            <div class="btn-contador">
+                                <button onclick="addContador1()">+</button>
+
+                                <button  onclick="delContador1()">-</button>
+                            </div>
+                        </div>
+
+                        <div class="carta">
+                            <input id="in_nomeCarta2" type="text" placeholder="Nome Carta">
+
+                            <p>Contadores: <span id="span_contador2">0</span></p>
+
+                            <div class="btn-contador">
+                                <button onclick="addContador2()">+</button>
+
+                                <button  onclick="delContador2()">-</button>
+                            </div>
+                        </div>
+
+                        <div class="carta">
+                            <input id="in_nomeCarta3" type="text" placeholder="Nome Carta">
+
+                            <p>Contadores: <span id="span_contador3">0</span></p>
+
+                            <div class="btn-contador">
+                                <button onclick="addContador3()">+</button>
+
+                                <button  onclick="delContador3()">-</button>
+                            </div>
+                        </div>
+
+                        <div class="carta">
+                            <input id="in_nomeCarta4" type="text" placeholder="Nome Carta">
+
+                            <p>Contadores: <span id="span_contador4">0</span></p>
+
+                            <div class="btn-contador">
+                                <button onclick="addContador4()">+</button>
+
+                                <button  onclick="delContador4()">-</button>
+                            </div>
+                        </div>
+
+                        <div class="carta">
+                            <input id="in_nomeCarta5" type="text" placeholder="Nome Carta">
+
+                            <p>Contadores: <span id="span_contador5">0</span></p>
+
+                            <div class="btn-contador">
+                                <button onclick="addContador5()">+</button>
+
+                                <button  onclick="delContador5()">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-fim">
+                        <button onclick="encerrarBatalha()">Encerrar Batalha</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-follow">
+                <p>Redes Sociais</p>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.facebook.com/Bruno.Pimentel42">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://twitter.com/KSLovekats">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.instagram.com/pimentel.ksl/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://github.com/KSL-Pimentel">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.linkedin.com/in/bruno-silva-pimentel/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="./index.html">Home</a>
+                <a>|</a>
+                <a href="">Sobre</a>
+                <a href="">Suporte</a>
+                <a href="">Avisos</a>
+                <a href="">FAQ</a>
+                <a href="">Privacidade</a>
+                <a>|</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
+            </div>
+
+            <div class="footer-sites">
+                <div class="footer-sites-single">
+                    <a href="https://magic.wizards.com/pt-BR">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://tcg.pokemon.com/pt-br/">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://www.yugioh-card.com/en/">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="footer-sites-single">
+                    <a href="https://mypcards.com/battlescenes">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <p>IntoTheSleeve is a property of KSL Co.,Ltd &copy;2022 All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/funcoes.js"></script>
+</body>
+
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var modalA = document.getElementById("analiseModal");
+    var modalB = document.getElementById("batalhaModal");
+    var modalS = document.getElementById("simuladorModal");
+
+    var btnA = document.getElementById("btn_modalA");
+    var btnB = document.getElementById("btn_modalB");
+
+    var spanA = document.getElementsByClassName("fechar-analise")[0];
+    var spanB = document.getElementsByClassName("fechar-batalha")[0];
+    var spanS = document.getElementsByClassName("fechar-simulador")[0];
+
+    btnA.onclick = function () {
+        modalA.style.display = "flex";
+        modalB.style.display = "none";
+        modalS.style.display = "none";
+    }
+
+    btnB.onclick = function () {
+        modalB.style.display = "flex";
+        modalA.style.display = "none";
+        modalS.style.display = "none";
+
+        in_hp.value = ""
+        in_num1.value = ""
+        in_num2.value = ""
+        in_nomeCarta1.value = ""
+        in_nomeCarta2.value = ""
+        in_nomeCarta3.value = ""
+        in_nomeCarta4.value = ""
+        in_nomeCarta5.value = ""
+
+        calcular_resultado.innerHTML = ""
+        resultado_sorte.innerHTML = ""
+        span_contador1.innerHTML = 0
+        span_contador2.innerHTML = 0
+        span_contador3.innerHTML = 0
+        span_contador4.innerHTML = 0
+        span_contador5.innerHTML = 0
+    }
+
+    spanA.onclick = function () {
+        modalA.style.display = "none";
+    }
+
+    spanB.onclick = function () {
+        modalB.style.display = "none";
+    }
+
+    spanS.onclick = function () {
+        modalS.style.display = "none";
+        modalB.style.display = "flex";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modalA) {
+            modalA.style.display = "none";
+        }
+        if (event.target == modalB) {
+            modalB.style.display = "none";
+        }
+    }
+
+    var pontosDuelo = 0
+
+    var duelosPKM = 0
+    var duelosMTG = 0
+    var duelosYGO = 0
+    var duelosTotais = 0
+
+    var vitoriasPKM = 0
+    var vitoriasMTG = 0
+    var vitoriasYGO = 0
+    var vitoriasTotais = 0
+
+    var hp = 0
+
+    var jogo = ""
+
+    function batalhar_pkm() {
+        duelosPKM++
+        duelos_pkm.innerHTML = duelosPKM
+
+        duelosTotais = duelosPKM + duelosMTG + duelosYGO
+        duelos_totais.innerHTML = duelosTotais
+
+        modalB.style.display = "none";
+        modalS.style.display = "flex";
+
+        h1_simulador.innerHTML = "Pokémon"
+
+        hp = 6
+        vida.innerHTML = hp
+
+        jogo = "pkm"
+
+        contador1 = 0
+        contador2 = 0
+        contador3 = 0
+        contador4 = 0
+        contador5 = 0
+    }
+
+    function batalhar_mtg() {
+        duelosMTG++
+        duelos_mtg.innerHTML = duelosMTG
+
+        duelosTotais = duelosPKM + duelosMTG + duelosYGO
+        duelos_totais.innerHTML = duelosTotais
+
+        modalB.style.display = "none";
+        modalS.style.display = "flex";
+
+        h1_simulador.innerHTML = "Magic: The Gatherine"
+
+        hp = 20
+        vida.innerHTML = hp
+
+        jogo = "mtg"
+
+        contador1 = 0
+        contador2 = 0
+        contador3 = 0
+        contador4 = 0
+        contador5 = 0
+    }
+
+    function batalhar_ygo() {
+        duelosYGO++
+        duelos_ygo.innerHTML = duelosYGO
+
+        duelosTotais = duelosPKM + duelosMTG + duelosYGO
+        duelos_totais.innerHTML = duelosTotais
+
+        modalB.style.display = "none";
+        modalS.style.display = "flex";
+
+        h1_simulador.innerHTML = "Yu-Gi-Oh!"
+
+        hp = 8000
+        vida.innerHTML = hp
+
+        jogo = "tgo"
+
+        contador1 = 0
+        contador2 = 0
+        contador3 = 0
+        contador4 = 0
+        contador5 = 0
+    }
+
+    function calcularHp() {
+        var hpVar = Number(in_hp.value)
+        var operacao = sel_hp.value
+
+        if (operacao == "perder") {
+            hp -= hpVar
+        } else {
+            hp += hpVar
+        }
+
+        vida.innerHTML = hp
+    }
+
+    function calculadora() {
+        var num1 = Number(in_num1.value)
+        var num2 = Number(in_num2.value)
+        var operacao = sel_operacao.value
+
+        if (operacao == "mais") {
+            calcular_resultado.innerHTML = num1 + num2
+        } else if (operacao == "menos") {
+            calcular_resultado.innerHTML = num1 - num2
+        } else if (operacao == "vezes") {
+            calcular_resultado.innerHTML = num1 * num2
+        } else {
+            calcular_resultado.innerHTML = num1 / num2
+        }
+
+        vida.innerHTML = hp
+    }
+
+    function sortear() {
+        var dado = sel_dados.value
+
+        if (dado == "d2") {
+            var sorte = parseInt(1 + Math.random() * 2)
+
+            if (sorte == 1) {
+                resultado_sorte.innerHTML = "Cara"
+            } else {
+                resultado_sorte.innerHTML = "Coroa"
+            }
+        } else if (dado == "d6") {
+            var sorte = parseInt(1 + Math.random() * 6)
+
+            resultado_sorte.innerHTML = sorte
+        } else if (dado == "d20") {
+            var sorte = parseInt(1 + Math.random() * 20)
+
+            resultado_sorte.innerHTML = sorte
+        } else {
+            var sorte = parseInt(1 + Math.random() * 100)
+
+            resultado_sorte.innerHTML = sorte
+        } 
+    }
+
+    var contador1 = 0
+    var contador2 = 0
+    var contador3 = 0
+    var contador4 = 0
+    var contador5 = 0
+
+    function addContador1() {
+        if (jogo == "pkm") {
+            contador1 += 10
+        } else {
+            contador1 ++
+        }
+
+        span_contador1.innerHTML = contador1
+    }
+
+    function delContador1() {
+        if (jogo == "pkm") {
+            contador1 -= 10
+        } else {
+            contador1 --
+        }
+
+        span_contador1.innerHTML = contador1
+    }
+
+    function addContador2() {
+        if (jogo == "pkm") {
+            contador2 += 10
+        } else {
+            contador2 ++
+        }
+
+        span_contador2.innerHTML = contador2
+    }
+
+    function delContador2() {
+        if (jogo == "pkm") {
+            contador2 -= 10
+        } else {
+            contador2 --
+        }
+
+        span_contador2.innerHTML = contador2
+    }
+
+    function addContador3() {
+        if (jogo == "pkm") {
+            contador3 += 10
+        } else {
+            contador3 ++
+        }
+
+        span_contador3.innerHTML = contador3
+    }
+
+    function delContador3() {
+        if (jogo == "pkm") {
+            contador3 -= 10
+        } else {
+            contador3 --
+        }
+
+        span_contador3.innerHTML = contador3
+    }
+
+    function addContador4() {
+        if (jogo == "pkm") {
+            contador4 += 10
+        } else {
+            contador4 ++
+        }
+
+        span_contador4.innerHTML = contador4
+    }
+
+    function delContador4() {
+        if (jogo == "pkm") {
+            contador4 -= 10
+        } else {
+            contador4 --
+        }
+
+        span_contador4.innerHTML = contador4
+    }
+
+    function addContador5() {
+        if (jogo == "pkm") {
+            contador5 += 10
+        } else {
+            contador5 ++
+        }
+
+        span_contador5.innerHTML = contador5
+    }
+
+    function delContador5() {
+        if (jogo == "pkm") {
+            contador5 -= 10
+        } else {
+            contador5 --
+        }
+
+        span_contador5.innerHTML = contador5
+    }
+
+    function encerrarBatalha() {
+        modalS.style.display = "none";
+        modalB.style.display = "flex";
+
+        if (hp > 0) {
+            pontosDuelo += 30
+            vitoriasTotais ++
+
+            vitorias_totais.innerHTML = vitoriasTotais
+
+            if (jogo == "pkm") {
+                vitoriasPKM ++
+
+                vitorias_pkm.innerHTML = vitoriasPKM
+            } else if (jogo == "mtg") {
+                vitoriasMTG ++
+
+                vitorias_mtg.innerHTML = vitoriasMTG
+            } else {
+                vitoriasYGO ++
+
+                vitorias_ygo.innerHTML = vitoriasYGO
+            }
+        } else {
+            pontosDuelo -= 10
+
+            if (pontosDuelo < 0) {
+                pontosDuelo = 0
+            }
+        }
+
+        pontos_duelo.innerHTML = pontosDuelo
+
+        if (pontosDuelo < 100) {
+            rank.innerHTML = "Iniciante"
+        } else if (pontosDuelo < 300) {
+            rank.innerHTML = "Duelista"
+        } else {
+            rank.innerHTML = "Mestre"
+        }
+    }
+</script>

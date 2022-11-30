@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/comoJogar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Into The Sleeve</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo"> 
+                <h2> <b>I</b>NTO THE SLEEVE </h2>
+            </div>
+            
+            <div class="menu">
+                <a href="./index.html">
+                    Home
+                </a>
+                
+                <a href="./aprenderPKM.html">
+                    Como Jogar
+                </a>
+                
+                <a class="btn-menu" href="./login.html">
+                    Entrar
+                </a>
+            </div>
+
+            <div class="menu-mobile">
+                <i class="fa-solid fa-bars menu-mobile-icon"></i>
+
+                <div class="menu-items">
+                    <a href="./index.html">
+                        Home
+                    </a>
+                    
+                    <a href="./aprenderPKM.html">
+                        Como Jogar
+                    </a>
+                    
+                    <a href="./login.html">
+                        Entrar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="caixa-instrucao">
+                <h2>APRENDENDO AS REGRAS</h2>
+
+                <p>Aqui você verá tudo que precisa saber para começar a batalhar, desde regras, conceitos e mecânicas dos três principais TCG´s. Torne-se o Mago mais poderoso que esse mundo já viu!</p>
+                
+                <div class="main-btns">
+                    <div class="footer-sites">
+                        <div class="footer-sites-single">                            
+                            <a href="./aprenderPKM.html"><img src="./assets/marcas/pokemonLogo.png" alt=""></a>    
+                        </div>
+
+                        <div class="footer-sites-single">                           
+                            <a href="./aprenderMTG.html"><img src="./assets/marcas/magicLogo.png" alt=""></a>
+                        </div>
+                        
+                        
+                        <div class="footer-sites-single">
+                            <a href="./aprenderYGO.html"><img src="./assets/marcas/yugiohLogo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_regras" class="regras">
+        <div class="container">
+            <div class="regras-titulo">
+                <h1>MAGIC THE GATHERING</h1>
+            </div>
+        
+            <h2>Escolha o formato</h2>
+        
+            <div class="escolha-formatos">
+                <button onclick="escolherPadrao()">Padrão</button>
+                <button onclick="escolherCommander()">Commander</button>
+                <button onclick="escolherBooster()">Booster Draft</button>
+            </div>
+        
+            <div id="div_regras" class="regras-basico">
+                <h2>Sobre o Jogo</h2>
+        
+                <h3>Formato Padrão</h3>
+            
+                <p>Seus cards, seu deck, sua vitória! Construa o melhor deck com cards das últimas coleções, depois enfrente seus oponentes e seja vitorioso.</p>
+            
+                <p>O Padrão é um formato dinâmico, onde você constrói decks e joga com cards de coleções recentes do Magic. A jogabilidade evolui o tempo todo, e estratégias fresquinhas fazem do Padrão um dos jeitos mais populares e divertidos de jogar Magic.</p>
+            
+                <div class="basico-jogo">
+                     <div class="basico-jogo-single">
+                         <h4>Tamanho do Deck</h4>
+            
+                         <i class="fa-solid fa-window-restore"></i>
+            
+                         <p>60+</p>
+                     </div>
+            
+                     <div class="basico-jogo-single">
+                         <h4>Número de Jogadores</h4>
+            
+                         <i class="fa-solid fa-users"></i>
+            
+                         <p>2</p>
+                     </div>
+            
+                     <div class="basico-jogo-single">
+                         <h4>Tempo de Jogo</h4>
+            
+                         <i class="fa-solid fa-stopwatch"></i>
+            
+                         <p>20 min</p>
+                     </div>
+                </div>
+            </div>
+        
+            <div class="regras-gerais">
+                <h2>REGRAS</h2>
+
+                <p>Se você já possui cards de Magic, fique com eles em mãos! Esses cards representam as ferramentas que você vai usar para derrotar seus oponentes. Você evocará criaturas temíveis, usará encantamentos e itens místicos e conjurará mágicas incríveis. Os cards são as peças do seu jogo, e você pode combiná-los de várias maneiras.</p>
+
+                <h3>Como vencer uma partida</h3>
+
+                <p>Você e seu oponente começam com 20 pontos de vida. Reduza o total de pontos de vida de seu oponente a 0 para vencer o jogo! A maneira mais comum de fazer isso é atacar seu oponente com criaturas durante o combate.</p>
+
+                <h3>Tipos de cartas</h3>
+
+                <p>Seu deck é composto de terrenos e criaturas, mas também pode conter feitiços, mágicas instantâneas, artefatos, encantamentos e planeswalkers! Aqui nós veremos quais são os tipos de cards e como usá-los</p>
+
+                <p><b>Cartas de Terrenos</b></p>
+
+                <div class="box-mtg">
+                    <p>Os cards de terreno são a base dos decks bem-sucedidos de Magic. Os terrenos fornecem mana, a energia mágica necessária para conjurar todos os outros cards do deck. Você pode jogar um terreno durante a sua fase principal em cada um dos seus turnos. <br><br> Existem cinco tipos de terrenos básicos, e cada um corresponde a uma  das cinco cores de magia. <br><br> Nem todos os terrenos são terrenos básicos. Alguns terrenos não básicos viram para gerar diversas cores de mana, enquanto outros possuem outras habilidades únicas.</p>
+
+                    <img src="./assets/cards/terrreno-mtg.jpg" alt="">
+                </div>
+
+                <p><b>Mágicas</b></p>
+
+                <p>Todos os cards que não forem terrenos podem ser jogados como mágicas. Alguns tipos de mágicas são colocadas no campo de batalha e se tornam “permanentes”. Outros tipos causam um efeito e vão para o seu cemitério.</p>
+
+                <p><b>Cartas de Criaturas</b></p>
+
+                <div class="box-mtg">
+                    <p>As criaturas são permanentes que representam seus lacaios. Durante o combate, elas podem atacar seus oponentes e defendê-lo de ataques. Você pode conjurar mágicas de criatura durante a sua fase principal. <br><br> As mágicas têm um custo de mana que pode ser visto no canto superior direito da carta. <br><br> As habilidades do card estão na caixa de texto. As criaturas também apresentam dois números no canto inferior direito. O primeiro mostra a quantidade de pontos de dano que a criatura causa em combate. O segundo é a resistência.</p>
+
+                    <img src="./assets/cards/criatura-mtg.png" alt="">
+                </div>
+
+                <p><b>Cartas de Artefatos e Encantamentos</b></p>
+
+                <p>Artefatos e Encantamentos são permanentes que representam itens mágicos e manifestações mágicas estáveis. A maioria dos artefatos é incolor, o que significa que eles não precisam de uma cor específica de mana para serem conjurados. Alguns artefatos também são criaturas. Você pode conjurar mágicas de artefatos e de encantamentos durante a sua fase principal.</p>
+                
+                <div class="box-cards-mtg">
+                    <img src="./assets/cards/artefato-mtg.jpg" alt="">
+
+                    <img src="./assets/cards/artefato-criatura-mtg.jpg" alt="">
+
+                    <img src="./assets/cards/encantamento-mtg.png" alt="">
+                </div>
+
+                <p><b>Cartas de Feitiços e Mágicas Instantâneas</b></p>
+
+                <p>Feitiços e mágicas instantâneas representam sortilégios poderosos que podem ter uma vasta gama de efeitos. Depois que esses efeitos são ativados, essas mágicas são colocadas no cemitério. Você só pode conjurar um feitiço durante a sua fase principal, no mesmo momento que conjurar criaturas e outras mágicas de permanentes. Você pode conjurar mágicas instantâneas a praticamente qualquer momento, no turno de qualquer um dos jogadores, até mesmo em resposta a outra mágica!</p>
+
+                <div class="box-cards-mtg">
+                    <img src="./assets/cards/feitico-mtg.jpg" alt="">
+
+                    <img src="./assets/cards/magica-inst-mtg.jpg" alt="">
+                </div>
+
+                <p><b>Planeswalkers</b></p>
+
+                <div class="planeswalker-mtg">
+                    <div class="box-planeswalker">
+                        <p>Os planeswalkers são aliados poderosos que você pode convocar para lutar ao seu lado. <br><br> O número no canto inferior direito do card de planeswalker é a sua “lealdade”. Ele entra em jogo com aquela quantidade de marcadores de lealdade. Ele é mandado para o demitério caso não tenha nenhum marcador de lealdade. <br><br> Cada planeswalker tem um subtipo. Se dois ou mais planeswalkers que têm um subtipo em comum estiverem em jogo, eles serão colocados nos cemitérios de seus donos.</p>
+                        
+                        <img src="./assets/cards/magicCard.jpg" alt="">
+                    </div>
+                    
+                    <p><b>Habilidades de planeswalker</b> - Cada planeswalker tem uma quantidade de habilidades ativadas. Você só pode jogar uma dessas habilidades no momento em que puder jogar um feitiço, e somente se nenhuma das habilidades do planeswalker tiver sido jogada naquele turno. <br><br> O custo para jogar uma habilidade de planeswalker é adicionar ou remover uma determinada quantidade de marcadores de lealdade dele. Por exemplo, o símbolo  significa “Coloque um marcador de lealdade neste planeswalker”, e o símbolo  significa “Remova três marcadores de lealdade deste planeswalker.” Você não pode jogar uma habilidade com custo de lealdade negativo a menos que o planeswalker tenha no mínimo aquela quantidade de marcadores de lealdade.</p>
+                    
+                    <p><b>Lutando com um planeswalker</b> - Os planeswalkers podem ser atacados. Quando declara criaturas atacantes, você decide se cada um ataca o seu oponente ou um planeswalker que aquele oponente controla. Seu oponente pode bloquear normalmente, independentemente do que cada criatura está atacando. Se uma criatura causa dano de combate a um planeswalker, aquela quantidade de marcadores de lealdade é removida dele. <br><br> Outras fontes podem causar dano aos planeswalkers. Se uma mágica ou habilidade que você controla causaria dano a um oponente, em vez disso, você pode fazer com que ela cause dano a um planeswalker que aquele oponente controla. Portanto, embora não possa usar um planeswalker como alvo de Choque, você pode fazer com que o Choque que tem seu oponente como alvo cause 2 pontos de dano a um dos planeswalkers dele, em vez de ao jogador. Você não pode dividir o dano de uma fonte entre um jogador e um planeswalker. O dano causado a um planeswalker resulta naquela quantidade de marcadores de lealdade removida dele.</p>
+                </div>
+
+                <h3>Conjurar Mágicas</h3>
+
+                <p>Todos os cards que não são terrenos apresentam um custo de mana no canto superior direito. Este custo é representado por diferentes símbolos, os quais dizem que tipo de mana você deve gastar para conjurar aquela mágica. São eles:</p>
+
+                <div class="manas">
+                    <img src="./assets/icons/manaBranca.png" alt="" class="mana-white" onclick="mudarBranco()">
+                    
+                    <img src="./assets/icons/manaAzul.png" alt="" class="mana-blue" onclick="mudarAzul()">
+                    
+                    <img src="./assets/icons/manaPreta.png" alt="" class="mana-black" onclick="mudarPreto()">
+                    
+                    <img src="./assets/icons/manaVermelha.png" alt="" class="mana-red" onclick="mudarVermelho()">
+                    
+                    <img src="./assets/icons/manaVerde.png" alt="" class="mana-green" onclick="mudarVerde()">
+                </div>
+
+                <div id="div_manaContent" class="mana-content">
+                    <p><b  style="color: orange">BRANCO</b></p>
+
+                    <p>A cor do equilíbrio, lei, ordem e proteção, não necessariamente uma cor “do bem”, como estamos acostumados a pensar no nosso imaginário coletivo. Um mago que usa a cor branca preza a igualdade e estão sempre prontos para curar as criaturas no campo de batalha. <br><br> As criaturas mais comuns no branco são Soldados, Cavaleiros e Anjos. As magias mais clássicas são aquelas que fazem o jogo entrar em equilíbrio, para que os jogadores tenham o mesmo número de terrenos e criaturas no campo de batalha, por exemplo. É comum nesta cor as mágicas que destroiem artefatos, encantamentos e fazem o jogador ganhar vida.</p>
+                </div>
+
+                <p>Para pagar o custo de mana, vire (na horizontal) os terrenos necessários no campo de batalha. Isso mostra que você usou os terrenos para gerar mana. Os cards virados são desvirados no início de cada um dos seus turnos, de modo a serem usados novamente.</p>
+
+                <div class="box-cards-mtg">
+                    <i class="fa-solid fa-share"></i>
+
+                    <img src="./assets/cards/terrreno-mtg.jpg" alt="">
+                </div>
+
+                <h3>Combate</h3>
+
+                <p><b>Atacar</b></p>
+
+                <p>Durante o seu turno, você decide se vai atacar e, se sim, com quais criaturas. Você não pode atacar com criaturas viradas, nem com criaturas que tenham entrado no campo de batalha no mesmo turno. Você tem uma fase de combate no meio do seu turno, e todas as criaturas que você decidir usar para tacar atacam ao mesmo tempo. <br><br> Após decidir com quais criaturas vai atacar, vire-as. As criaturas viradas, assim como os terrenos virados, serão desviradas no início do seu próximo turno. <br><br> Na maioria das vezes, suas criaturas atacarão o oponente. Às vezes, elas também atacam os planeswalkers. Mas uma criatura nunca ataca outra criatura. Você as envia para o campo de batalha e seu oponente decide o que acontece em seguida.</p>
+
+                <p><b>Bloquear</b></p>
+
+                <p>Agora imagine que você está do outro lado do campo de batalha. Seu oponente atacou você com algumas criaturas. Se você tem criaturas desviradas, pode usá-las para bloquear. Ao bloquear, você não tem que virar a criatura. Cada criatura só pode bloquear uma criatura atacante. É possível usar várias criaturas para bloquear uma mesma criatura atacante. Neste caso, o jogador atacante decide quantos pontos de dano a criatura atacante causará a cada uma das criaturas bloqueadoras.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-follow">
+                <p>Redes Sociais</p>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.facebook.com/Bruno.Pimentel42">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+                    
+                <div class="footer-follow-icons">
+                    <a href="https://twitter.com/KSLovekats">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.instagram.com/pimentel.ksl/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://github.com/KSL-Pimentel">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div class="footer-follow-icons">
+                    <a href="https://www.linkedin.com/in/bruno-silva-pimentel/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="./index.html">Home</a>
+                <a>|</a>
+                <a href="">Sobre</a>
+                <a href="">Suporte</a>
+                <a href="">Avisos</a>
+                <a href="">FAQ</a>
+                <a href="">Privacidade</a>
+                <a>|</a>
+                <a href="./login.html">Login</a>
+                <a href="./cadastro.html">Cadastar</a>
+            </div>
+
+            <div class="footer-sites">
+                <div class="footer-sites-single">
+                    <a href="https://magic.wizards.com/pt-BR">
+                        <img src="./assets/marcas/magicLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://tcg.pokemon.com/pt-br/">
+                        <img src="./assets/marcas/pokemonLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://www.yugioh-card.com/en/">
+                        <img src="./assets/marcas/yugiohLogo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="footer-sites-single">
+                    <a href="https://mypcards.com/battlescenes">
+                        <img src="./assets/marcas/BattleScenesLogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <p>IntoTheSleeve is a property of KSL Co.,Ltd &copy;2022 All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/cde2947fe5.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/comoJogar.js"></script>
+</body>
+
+</html>
